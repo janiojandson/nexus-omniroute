@@ -22,6 +22,8 @@ ENV PORT=8080
 ENV NODE_ENV=production
 # Permitir acesso sem autenticacao previa ou com qualquer chave em comunicacao de proxy interno
 ENV REQUIRE_API_KEY=false
+# Definir a senha inicial do dashboard explicitamente
+ENV INITIAL_PASSWORD=nexus123
 
 # Usar 'omniroute serve' com as opcoes aceitas pelo CLI
 CMD ["sh", "-c", "omniroute serve --port ${PORT:-8080} --no-open --no-tray --log"]
