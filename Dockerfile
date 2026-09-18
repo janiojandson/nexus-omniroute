@@ -20,6 +20,8 @@ EXPOSE 20128
 
 ENV PORT=8080
 ENV NODE_ENV=production
+# Permitir acesso sem autenticacao previa ou com qualquer chave em comunicacao de proxy interno
+ENV REQUIRE_API_KEY=false
 
 # Usar 'omniroute serve' com as opcoes aceitas pelo CLI
 CMD ["sh", "-c", "omniroute serve --port ${PORT:-8080} --no-open --no-tray --log"]
