@@ -1,0 +1,12 @@
+{
+  " name\: \nexus-omniroute\,
+ \version\: \1.0.0\,
+ \description\: \Nexus OmniRoute Gateway Service para Railway e Local\,
+ \main\: \index.js\,
+ \scripts\: {
+ \start\: \omniroute --port 20128 --host 0.0.0.0\
+ },
+ \dependencies\: {
+ \omniroute\: \latest\
+ }
+}
