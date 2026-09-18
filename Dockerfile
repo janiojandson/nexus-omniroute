@@ -19,7 +19,7 @@ EXPOSE 8080
 EXPOSE 20128
 
 ENV PORT=8080
-ENV HOST=0.0.0.0
 ENV NODE_ENV=production
 
-CMD ["sh", "-c", "omniroute --port ${PORT:-8080} --host 0.0.0.0"]
+# Usar 'omniroute serve' com as opcoes aceitas pelo CLI
+CMD ["sh", "-c", "omniroute serve --port ${PORT:-8080} --no-open --no-tray --log"]
