@@ -15,10 +15,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Instalar omniroute globalmente
 RUN npm install -g omniroute --omit=dev
 
+EXPOSE 8080
 EXPOSE 20128
 
-ENV PORT=20128
+ENV PORT=8080
 ENV HOST=0.0.0.0
 ENV NODE_ENV=production
 
-CMD ["omniroute", "--port", "20128", "--host", "0.0.0.0"]
+CMD ["sh", "-c", "omniroute --port ${PORT:-8080} --host 0.0.0.0"]
